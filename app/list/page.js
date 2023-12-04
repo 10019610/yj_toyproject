@@ -9,6 +9,9 @@ export default async function List() {
   return (
     <div>
       <div className="list-bg">
+        <div>
+          <Link href="/write">글쓰러가자</Link>
+        </div>
         {result.map((item, index) => (
           <div className="list-item" key={index}>
             <Link href={`/detail/${item._id}`}>

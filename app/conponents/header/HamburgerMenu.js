@@ -20,7 +20,9 @@ const HamburgerMenu = ({ isOpen, onClose }) => {
   return (
     <div className={`${classes.hamburger_menu} ${isOpen ? classes.open : ""}`}>
       <div>
-        <span className={classes.head}>0__J0</span>
+        <span className={classes.head}>
+          {session.data && session.data.user.name + "님 안녕하세요!"}
+        </span>
         <span className={classes.closeBtn}>
           <img src="/close.png" onClick={onClose} />
         </span>
